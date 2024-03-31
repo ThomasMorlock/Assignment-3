@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NAIT\\CPSC1012\\Assignment-3\\Assignment-3.csproj",
+      "projectUniqueName": "C:\\NAIT\\CPSC1012\\GitHub\\Assignment-3\\Assignment-3.csproj",
       "projectName": "Assignment-3",
-      "projectPath": "C:\\NAIT\\CPSC1012\\Assignment-3\\Assignment-3.csproj",
+      "projectPath": "C:\\NAIT\\CPSC1012\\GitHub\\Assignment-3\\Assignment-3.csproj",
       "packagesPath": "C:\\Users\\thoma\\.nuget\\packages\\",
-      "outputPath": "C:\\NAIT\\CPSC1012\\Assignment-3\\obj\\",
+      "outputPath": "C:\\NAIT\\CPSC1012\\GitHub\\Assignment-3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\thoma\\AppData\\Roaming\\NuGet\\NuGet.Config"

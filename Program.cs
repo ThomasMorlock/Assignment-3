@@ -6,7 +6,7 @@ int physicalSize = 31;
 int logicalSize = 0;
 
 double minValue = 0.0;
-double maxValue = 14.0;
+double maxValue = 100;
 double[] values = new double[physicalSize];
 string[] dates = new string[physicalSize];
 
@@ -103,10 +103,6 @@ string Prompt(string prompt)
     }
   }
   return response;
-  // string response = "";
-  // Console.Write(prompt);
-  // response = Console.ReadLine();
-  // return response;
 }
 
 string GetFileName()
@@ -329,63 +325,6 @@ void EditMemoryValues(string[] dates, double[] values, int logicalSize)
 
 void GraphValuesInMemory(string[] dates, double[] values, int logicalSize)
 {
-	//  if (logicalSize == 0)
-  //   {
-  //       throw new Exception("No entries loaded. Please load a file into memory.");
-  //   }
-
-  //   Console.WriteLine("\nGraph Values in Memory:");
-
-  //   // Print Y-axis labels (dollars)
-  //   Console.WriteLine("Dollars");
-  //   for (int dollar = 90; dollar >= 0; dollar -= 10)
-  //   {
-  //       if (dollar == 0)
-  //       {
-  //           Console.WriteLine("$0   |");
-  //       }
-  //       else
-  //       {
-  //           Console.WriteLine($"${dollar,-4}|");
-  //       }
-  //   }
-
-  //   // Print horizontal line separator
-  //   Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------------------------------------");
-
-  //   // Print X-axis labels (days)
-  //   Console.WriteLine("Days   |   1   2   3   4   5   6   7   8   9   10   11   12   13   14   15   16   17   18   19   20   21   22   23   24   25   26   27   28   29   30   31");
-
-  //   // Print the graph
-  //   Console.Write("       |");
-  //   for (int day = 1; day <= 31; day++)
-  //   {
-  //       bool valueFound = false;
-  //       double valueToGraph = 0.0;
-
-  //       for (int i = 0; i < logicalSize; i++)
-  //       {
-  //           if (DateTime.TryParse(dates[i], out DateTime date))
-  //           {
-  //               if (date.Day == day)
-  //               {
-  //                   valueFound = true;
-  //                   valueToGraph = values[i];
-  //                   break;
-  //               }
-  //           }
-  //       }
-
-  //       if (valueFound)
-  //       {
-  //           Console.Write($" ${valueToGraph,-3} ");
-  //       }
-  //       else
-  //       {
-  //           Console.Write("    ");
-  //       }
-  //   }
-  //   Console.WriteLine();
   if (logicalSize == 0)
     {
         throw new Exception("No entries loaded. Please load a file into memory.");
@@ -393,7 +332,7 @@ void GraphValuesInMemory(string[] dates, double[] values, int logicalSize)
 
     Console.WriteLine("\nGraph Values in Memory:");
 
-    // Print the graph
+
     for (int dollar = 90; dollar >= 0; dollar -= 10)
     {
         Console.Write($"${dollar,-4}|");
@@ -416,19 +355,21 @@ void GraphValuesInMemory(string[] dates, double[] values, int logicalSize)
                 }
             }
 
+
+            // All the if else stuff is just for formating if day < 10 the spacing is different
             if (valueFound)
             {
-                Console.Write($"   ${valueToGraph}");
+                Console.Write($"  ${valueToGraph}");
             }
             else
             {
-                Console.Write("    ");
+                Console.Write("     ");
             }
         }
         Console.WriteLine();
     }
 
-    // Print X-axis labels (days)
-    Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+    Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------------------------------------");
     Console.WriteLine("Days |    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16   17   18   19   20   21   22   23   24   25   26   27   28   29   30   31");
 }
